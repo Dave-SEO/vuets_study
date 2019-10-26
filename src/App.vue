@@ -30,6 +30,16 @@ export default class App extends Vue {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#app{
+    height: 100%;
+    .home{
+      text-align: center;
+    }
 }
 </style>

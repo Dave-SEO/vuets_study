@@ -3,15 +3,23 @@ import Home from '../views/Home.vue'; // 注意这里的路径，有原来的./�
 export default [
   {
     path: '/',
-    name: 'home',
-    component: Home,
+    component: () => import('@/components/TMain/index.vue'),
+    children: [
+      {
+        path: '/home',
+        name: 'home',
+        component: Home,
+      },
+      {
+          path: '/about',
+          name: 'about',
+          component: () => import('../views/About.vue'),
+      },
+    ],
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+      path: '/login',
+      name: 'name',
+      component : () => import('@/views/login/index'),
   },
 ];

@@ -14,10 +14,14 @@ export default {
     HelloWorld
   },
   created(){
-    alert(0)
   },
   mounted(){
-    alert(1)
   }
 }
 </script>
+<style>
+  .home{
+    width: 3000px;
+    height: 3000px;
+  }
+</style>
